@@ -37,7 +37,10 @@ project(${CMAKE_PROJECT_NAME})
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
 # Create an executable object type
-add_executable(${CMAKE_PROJECT_NAME} Core/Src/app_main.cpp)
+add_executable(${CMAKE_PROJECT_NAME}
+        Core/Src/app_main.cpp
+        Core/Src/application/Inverter.cpp
+)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
@@ -55,6 +58,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    Core/Inc/
 )
 
 # Add project symbols (macros)
@@ -68,3 +72,7 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
 
     # Add user defined libraries
 )
+
+
+# TODO: Tests. Use it in a diff project or stay here?
+#add_subdirectory(UnitTests)

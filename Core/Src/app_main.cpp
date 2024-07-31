@@ -11,6 +11,6 @@ void app_main() {
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
     printf("Hello World");
 
-    // Remember, here stack size is counted in words, not bytes
+    // Remember, freertos stack size is counted in words, not bytes
     xTaskCreate(nullptr, nullptr, 128, nullptr, tskIDLE_PRIORITY, nullptr);
 }
