@@ -133,6 +133,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
+  // TODO: Add queues here or inside app_main?
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -141,6 +142,8 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  // TODO: Add main thread here or inside app_main?
+  app_main();
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
