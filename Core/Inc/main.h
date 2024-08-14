@@ -59,6 +59,7 @@ extern void app_main(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TEST_CONST "My Const"
 
 /* USER CODE BEGIN Private defines */
 

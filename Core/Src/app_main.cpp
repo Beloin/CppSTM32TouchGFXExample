@@ -3,9 +3,9 @@
 //
 
 #include <cstdio>
-#include "stm32f750xx.h"
-#include "stm32f7xx_hal_gpio.h"
-#include "task.h"
+#include "stm32f7xx.h"
+#include <FreeRTOS.h>
+#include <task.h>
 
 void app_main() {
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
